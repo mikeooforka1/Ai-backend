@@ -1,0 +1,9 @@
+node_modules/
+.venv/
+data/
+.env
+engine/models/
+engine/vendor/
+__pycache__/
+*.pyc
+.env.example

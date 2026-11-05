@@ -1,0 +1,10 @@
+import dotenv from 'dotenv';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+dotenv.config({path: path.join(root, '.env')});
+const python = process.env.PYTHON_BIN || path.join(root, '.venv', process.platform === 'win32' ? 'Scripts/python.exe' : 'bin/python');
+const result = spawnSync(python, [path.join(root, 'engine/doctor.py')], {cwd: root, env: process.env, stdio: 'inherit'});
+if (result.error) console.error('Python unavailable:', result.error.message, '\nRun corepack yarn setup:python.');
+process.exit(result.status ?? 1);

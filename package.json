@@ -1,0 +1,24 @@
+{
+  "name": "@vividflow/backend",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "dev": "node --watch src/server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "setup:python": "node scripts/setup-python.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "test:python": "node scripts/test-python.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "multer": "^2.0.2"
+  },
+  "packageManager": "yarn@4.9.2"
+}

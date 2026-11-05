@@ -1,0 +1,9 @@
+{
+  "model": "official Wav2Lip GAN TorchScript",
+  "device": "cpu",
+  "frames": 10,
+  "elapsedSeconds": 2.2,
+  "mouthRegionMeanChange": 9.14,
+  "outsideFacePreserved": true,
+  "note": "Tests real inference and regional isolation with a portrait and tone, not perceptual speech-sync quality or full face-swap accuracy."
+}
